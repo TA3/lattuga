@@ -1,0 +1,150 @@
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+/* Now, let's apply it on an element */
+body {
+  font-family: "system";
+}
+body,html{
+	margin:0;
+	overflow: hidden;
+}
+.moveable {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  display: none
+}
+.movable>i{
+	font-size: 0.5em;
+	color:#f2f2f2;
+}
+
+.container{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: rgba(217, 195, 133, 0.8);
+}
+.titlebar-button {
+  -webkit-app-region: no-drag;
+}
+
+.controls{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	width: 100vw;
+}
+
+.controls>div{
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.controls>.timer{
+	width: 300px;
+	text-align: center;
+}
+.controls.hidden>div:not('.timer'){
+	display: none;
+}
+
+
+
+
+ .gg-controller {
+ box-sizing: border-box;
+ position: relative;
+ display: block;
+ transform: scale(var(--ggs,1));
+ width: 8px;
+ height: 8px;
+ border: 2px solid;
+ border-radius: 100px
+}
+
+.gg-controller::before {
+ content: "";
+ display: block;
+ box-sizing: border-box;
+ position: absolute;
+ width: 14px;
+ height: 14px;
+ box-shadow:
+ -6px -6px 0 -4px,
+ 6px 6px 0 -4px,
+ 6px -6px 0 -4px,
+ -6px 6px 0 -4px;
+ left: -5px;
+ top: -5px;
+ transform: rotate(45deg)
+} 
+.gg-arrow-left {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px
+}
+.gg-arrow-left::after,
+.gg-arrow-left::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 3px
+}
+.gg-arrow-left::after {
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    bottom: 7px
+}
+.gg-arrow-left::before {
+    width: 16px;
+    height: 2px;
+    bottom: 10px;
+    background: currentColor
+}
+ .gg-arrow-right {
+ box-sizing: border-box;
+ position: relative;
+ display: block;
+ transform: scale(var(--ggs,1));
+ width: 22px;
+ height: 22px
+}
+
+.gg-arrow-right::after,
+.gg-arrow-right::before {
+ content: "";
+ display: block;
+ box-sizing: border-box;
+ position: absolute;
+ right: 3px
+}
+
+.gg-arrow-right::after {
+ width: 8px;
+ height: 8px;
+ border-top: 2px solid;
+ border-right: 2px solid;
+ transform: rotate(45deg);
+ bottom: 7px
+}
+
+.gg-arrow-right::before {
+ width: 16px;
+ height: 2px;
+ bottom: 10px;
+ background: currentColor
+} 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="controls">
+        <div class="backward"><i class="gg-arrow-left"></i></div>
+        <div class="timer">25m timer</div>
+        <div class="forward"><i class="gg-arrow-right"></i></div>
+      </div>
+      <span class="moveable"><i class="gg-controller"></i></span>
+    </div>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+  <!-- normal script imports etc  -->
+ 
+  <!-- Insert this line after script imports -->
+  <script>if (window.module) module = window.module;</script>
+  <script type="text/javascript">
+    const ipcRenderer = require('electron').ipcRenderer; 
+     
+    document.querySelector('.forward').addEventListener('click', () => {
+        ipcRenderer.send("forward")
+    });
+    document.querySelector('.backward').addEventListener('click', () => {
+        ipcRenderer.send("backward")
+    });
+    document.querySelector('.timer').addEventListener('click', () => {
+        ipcRenderer.send("count")
+    });
+    ipcRenderer.on('updateBtn', (event, message) => {
+      document.querySelector('.timer').innerText = message // Prints 'whoooooooh!'
+    })
+
+</script>
+
+  </body>
+</html>
