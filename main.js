@@ -90,8 +90,8 @@ const changeMinutes = (backward) => {
 const clearTimer = () => {
     clearInterval(timer)
     button.label = `${minutes}m timer`;
-    isCounting = false,
-        backward.enabled = true
+    isCounting = false
+    backward.enabled = true
     forward.enabled = true
     win.webContents.send('updateBtn', minutes + "m timer")
     tray.setTitle("")
