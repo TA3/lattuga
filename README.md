@@ -6,13 +6,15 @@
 
 ## Controls
 Right-Click: Show/Hide GUI window
+<br>
 Left-Click: Pause/Continue Timer
+<br>
 Double-Click: Stop Timer
 
 
 ## Preview
-<img width="200px" src="https://github.com/TA3/lattuga/raw/master/screenshot/mb1.png">
-<img width="200px" src="https://github.com/TA3/lattuga/raw/master/screenshot/mb2.png">
+<img width="400px" src="https://github.com/TA3/lattuga/raw/master/screenshot/mb1.png">
+<img width="400px" src="https://github.com/TA3/lattuga/raw/master/screenshot/mb2.png">
 <img src="https://github.com/TA3/lattuga/raw/master/screenshot/tb1.png">
 <img src="https://github.com/TA3/lattuga/raw/master/screenshot/tb2.png">
 
